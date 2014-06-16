@@ -46,4 +46,7 @@ gem 'simple_form'
 # motherfucking codes! do not use ‘ and ‘ (which look like 6 and 9 for the speech marks), use '' 
 gem 'devise'
 
+# add facebook authentication via omniauth
+gem 'omniauth-facebook'
+
 
