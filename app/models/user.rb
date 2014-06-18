@@ -3,6 +3,9 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
+
+         has_many :posts, dependent: :destroy
+         
 def self.find_or_create_from_auth_hash(auth_hash)
  find_by_auth_hash(auth_hash) || create_from_auth_hash(auth_hash)
  end
@@ -36,4 +39,8 @@ def self.find_or_create_from_auth_hash(auth_hash)
     super
  end
  end
+
+ def facebook
+     @facebook ||= Koala::Facebook::API.new(oauth_token)
+   end
 end

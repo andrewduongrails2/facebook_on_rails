@@ -41,7 +41,11 @@ gem 'spring',        group: :development
 #simple_form this mother ferrrrr
 gem 'simple_form'
 
+#implementing flat design
+gem 'flat-ui-rails'
 
+#adding further integration with facebook using Koala gem
+gem 'koala'
 
 # motherfucking codes! do not use ‘ and ‘ (which look like 6 and 9 for the speech marks), use '' 
 gem 'devise'
